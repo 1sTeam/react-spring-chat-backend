@@ -12,7 +12,7 @@ public class ResponseAuth {
 
     @Data
     @Builder
-    public static class Info{
+    public static class info{
         private String email;
         private String username;
     }
