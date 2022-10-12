@@ -1,5 +1,6 @@
-package com.example.ReactSpringChatBackEnd.Common;
+package com.example.ReactSpringChatBackEnd.common.config;
 
+import com.example.ReactSpringChatBackEnd.auth.security.JwtAuthTokenProvider;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,11 +10,11 @@ import org.springframework.context.annotation.PropertySource;
 @Configuration
 public class JwtConfig {
     @Value("${jwt.secret}") //secret을 환경 변수에서 가져옴
-    private String secret;
+    private String secret; // MysqlxDatatypes.Scalar -> ?
 
-//    @Bean
-//    public JwtAuthTokenProvider jwtProvider(){ //provider를 bean으로 등록
-//        return new JwtAuthTokenProvider(secret);
-//    }
+    @Bean
+    public JwtAuthTokenProvider jwtProvider(){ //provider를 bean으로 등록
+        return new JwtAuthTokenProvider(secret);
+    }
 
 }

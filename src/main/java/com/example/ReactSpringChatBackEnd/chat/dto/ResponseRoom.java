@@ -1,9 +1,7 @@
-package com.example.ReactSpringChatBackEnd.Chat;
+package com.example.ReactSpringChatBackEnd.chat.dto;
 
 import lombok.Builder;
 import lombok.Data;
-
-import java.util.List;
 
 public class ResponseRoom {
 
@@ -23,6 +21,5 @@ public class ResponseRoom {
     @Builder
     @Data
     public static class info{
-        private List<>;
     }
 }

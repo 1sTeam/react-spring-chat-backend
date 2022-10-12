@@ -1,10 +1,9 @@
-package com.example.ReactSpringChatBackEnd.Chat;
+package com.example.ReactSpringChatBackEnd.chat.dto;
 
-import com.sun.istack.NotNull;
 import lombok.Builder;
 import lombok.Data;
 
-public class ResponseChat {
+public class RequestChat {
 
     @Builder
     @Data

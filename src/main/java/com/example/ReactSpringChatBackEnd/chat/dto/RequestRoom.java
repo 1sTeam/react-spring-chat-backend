@@ -1,4 +1,4 @@
-package com.example.ReactSpringChatBackEnd.Chat;
+package com.example.ReactSpringChatBackEnd.chat.dto;
 
 import lombok.Builder;
 import lombok.Data;

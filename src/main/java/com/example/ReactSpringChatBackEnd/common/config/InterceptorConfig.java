@@ -1,5 +1,6 @@
-package com.example.ReactSpringChatBackEnd.Common;
+package com.example.ReactSpringChatBackEnd.common.config;
 
+import com.example.ReactSpringChatBackEnd.auth.interceptor.AuthInterceptor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -11,13 +12,13 @@ import java.util.List;
 @RequiredArgsConstructor
 @Configuration
 public class InterceptorConfig implements WebMvcConfigurer {
-  //  private final AuthInterceptor authInterceptor;
+    private final AuthInterceptor authInterceptor;
     @Override
     public void addInterceptors(InterceptorRegistry registry){
-//        List<String> excludePatterns = Arrays.asList("/api/auth/user","/api/auth/user/authenticate","/dev");//interceptor 제외할 부분
-//        registry.addInterceptor(authInterceptor)
-//                .addPathPatterns("/**")
-//                .excludePathPatterns(excludePatterns);
+        List<String> excludePatterns = Arrays.asList("/api/auth/user","/api/auth/user/authenticate","/dev","/h2/**");//interceptor 제외할 부분
+        registry.addInterceptor(authInterceptor)
+                .addPathPatterns("/**")
+                .excludePathPatterns(excludePatterns);
 
     }
 }
