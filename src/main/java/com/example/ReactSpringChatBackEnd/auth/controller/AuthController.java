@@ -44,7 +44,7 @@ public class AuthController {
     }
 
     @PutMapping("/api/auth/update")
-    public ResponseEntity<ResponseMessage> userUpdate(HttpServletRequest request, @RequestPart(value = "requestDto") RequestAuth.update updateDto) {
+    public ResponseEntity<ResponseMessage> userUpdate(HttpServletRequest request, @Valid @RequestBody RequestAuth.update updateDto) {
         Optional<String> token = jwtAuthTokenProvider.getAuthToken(request);
         String email = null;
         if (token.isPresent()) {
