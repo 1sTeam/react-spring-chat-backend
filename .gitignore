@@ -37,4 +37,4 @@ out/
 .vscode/
 
 ###비밀키###
-secrets/
+##secrets/
