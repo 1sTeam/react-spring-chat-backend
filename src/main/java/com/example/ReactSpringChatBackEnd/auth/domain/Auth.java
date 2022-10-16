@@ -1,12 +1,10 @@
 package com.example.ReactSpringChatBackEnd.auth.domain;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
-@Table(name = "auth")
+@Table(name="auth")
 @Entity
 @Getter
 @NoArgsConstructor
