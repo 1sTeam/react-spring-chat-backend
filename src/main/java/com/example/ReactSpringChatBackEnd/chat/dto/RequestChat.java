@@ -10,5 +10,11 @@ public class RequestChat {
     public static class test{
         private String nickname;
     }
+    @Builder
+    @Data
+    public static class MessageDto{
+        private String userName;
+        private String context;
+    }
 
 }
