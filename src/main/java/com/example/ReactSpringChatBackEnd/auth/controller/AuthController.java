@@ -24,10 +24,6 @@ public class AuthController {
 
     private final JwtAuthTokenProvider jwtAuthTokenProvider;
 
-    @GetMapping("/api")
-    public String aa(){
-        return "hello";
-    }
 
     @PostMapping("/api/auth/register")
     public ResponseEntity<ResponseMessage> userRegister(@Valid @RequestBody RequestAuth.register registerDto) {
