@@ -33,6 +33,7 @@ public class ChatController {
         System.out.println(messageDto);
         simpMessagingTemplate.convertAndSend("/sub/room/" + id, messageDto);
     }
+
     @PostMapping("/api/chat/room")
     public ResponseEntity<ResponseMessage> registerChatRoom(@RequestBody Map<String, String> name){
         chatService.registerRoom(name.get("name"));
